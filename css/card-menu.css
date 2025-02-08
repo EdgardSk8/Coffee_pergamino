@@ -1,0 +1,124 @@
+.contenedor-5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define 3 columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px; /* Espaciado interno alrededor del contenedor */
+}
+
+.card {
+    display: flex;
+    width: 100%; /* Asegúrate de que las tarjetas ocupen el 100% del ancho disponible */
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+    transform: translate(0px, -3px);
+}
+
+.card-interior {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-texto {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-imagen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05) rotate(1deg);
+}
+
+.contenedorpedidos {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btncantidad{
+    background-color: #dab68d;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: 1px solid #c7a783;
+    border-radius: 8px;
+}
+.btncantidad:hover{
+    background-color: #b19473;
+}
+
+.cantidad{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card-title{
+    font-weight: bold;
+    color: rgb(68, 41, 0);
+    font-size: 30px;
+    margin: 0px 0px 20px 0px; /*margin-bottom*/
+}
+
+.card-description{
+    font-weight: bold;
+    color: rgb(100, 49, 2);
+    font-size: 15px;
+    margin: 0px 0px 20px 0px; /*margin-bottom*/
+}
+
+.card-precio{
+    font-weight: bold;
+    color: rgb(68, 41, 0);
+    font-size: 15px;
+}
+
+/*boton de ver pedido*/
+
+.btnorder {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #633618;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.btnorder:hover {
+    transform: scale(1.1);
+    background-color: #8b5530;
+}

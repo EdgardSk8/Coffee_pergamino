@@ -1,0 +1,99 @@
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del Modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: center;
+    clip-path: inset(0 round 10px);
+    border: 2px solid black;
+}
+
+/* Botón de cierre */
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.pedido-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pedido-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.pedido-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.pedido-nombre {
+    font-weight: bold;
+    margin: 0;
+}
+
+.pedido-cantidad {
+    font-size: 16px;
+    color: #777;
+}
+
+.pedido-precio {
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    align-self: flex-start; /* Alinea el precio a la izquierda dentro del contenedor */
+}
+
+#whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#whatsapp-button::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg') no-repeat center;
+    background-size: contain;
+}
+
+

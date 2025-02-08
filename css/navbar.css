@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    position: fixed; /* Mantiene la navbar fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* La mantiene sobre otros elementos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Agrega un sutil sombreado para mejorar la estética */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar ul li:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.navbar ul li:hover a {
+    color: #ddd;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}

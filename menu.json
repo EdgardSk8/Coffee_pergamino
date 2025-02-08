@@ -1,0 +1,172 @@
+[
+    
+    {
+        "id": 1,
+        "nombre": "ESPRESSO",
+        "descripcion": "Café fuerte y concentrado",
+        "precio": 35.00,
+        "imagen": "./recursos/menu/espresso.jpg"
+    }
+    ,
+    {
+        "id": 2,
+        "nombre": "ESPRESSO DOBLE",
+        "descripcion": "Doble shot de espresso",
+        "precio": 65.00,
+        "imagen": "./recursos/menu/espresso-doble.jpg"
+    }
+    ,
+    {
+        "id": 3,
+        "nombre": "TE CALIENTE 8.OZ",
+        "descripcion": "Té caliente pequeño",
+        "precio": 30.00,
+        "imagen": "./recursos/menu/te-caliente-8oz.jpg"
+    }
+    ,
+    {
+        "id": 4,
+        "nombre": "TE CALIENTE 12.OZ",
+        "descripcion": "Té caliente mediano",
+        "precio": 55.00,
+        "imagen": "./recursos/menu/te-caliente-12oz.jpg"
+    }
+    ,
+    {
+        "id": 5,
+        "nombre": "CAFÉ NICA 8.OZ",
+        "descripcion": "Café nicaragüense pequeño",
+        "precio": 40.00,
+        "imagen": "./recursos/menu/cafe-nica-8oz.jpg"
+    }
+    ,
+    {
+        "id": 6,
+        "nombre": "CAFÉ NICA 12.OZ",
+        "descripcion": "Café nicaragüense mediano",
+        "precio": 50.00,
+        "imagen": "./recursos/menu/cafe-nica-12oz.jpg"
+    }
+    ,
+    {
+        "id": 7,
+        "nombre": "CAPUCHINO 8.OZ",
+        "descripcion": "Capuchino pequeño",
+        "precio": 60.00,
+        "imagen": "./recursos/menu/capuchino-8oz.jpg"
+    }
+    ,
+    {
+        "id": 8,
+        "nombre": "CAPUCHINO 12.OZ",
+        "descripcion": "Capuchino mediano",
+        "precio": 80.00,
+        "imagen": "./recursos/menu/capuchino-12oz.jpg"
+    }
+    ,
+    {
+        "id": 9,
+        "nombre": "MOCACHINO 8.OZ",
+        "descripcion": "Mocachino pequeño",
+        "precio": 65.00,
+        "imagen": "./recursos/menu/mocachino-8oz.jpg"
+    }
+    ,
+    {
+        "id": 10,
+        "nombre": "MOCACHINO 12.OZ",
+        "descripcion": "Mocachino mediano",
+        "precio": 85.00,
+        "imagen": "./recursos/menu/mocachino-12oz.jpg"
+    }
+    ,
+    {
+        "id": 11,
+        "nombre": "LATTE 8.OZ",
+        "descripcion": "Latte pequeño",
+        "precio": 65.00,
+        "imagen": "./recursos/menu/latte-8oz.jpg"
+    }
+    ,
+    {
+        "id": 12,
+        "nombre": "LATTE 12.OZ",
+        "descripcion": "Latte mediano",
+        "precio": 85.00,
+        "imagen": "./recursos/menu/latte-12oz.jpg"
+    }
+    ,
+    {
+        "id": 13,
+        "nombre": "CHOCOLATE CALIENTE 8.OZ",
+        "descripcion": "Chocolate caliente pequeño",
+        "precio": 65.00,
+        "imagen": "./recursos/menu/chocolate-caliente-8oz.jpg"
+    }
+    ,
+    {
+        "id": 14,
+        "nombre": "CHOCOLATE CALIENTE 12.OZ",
+        "descripcion": "Chocolate caliente mediano",
+        "precio": 85.00,
+        "imagen": "./recursos/menu/chocolate-caliente-12oz.jpg"
+    }
+    ,
+    {
+        "id": 15,
+        "nombre": "CAPUCHINO PERGAMINO 8.OZ",
+        "descripcion": "Capuchino especial pequeño",
+        "precio": 70.00,
+        "imagen": "./recursos/menu/capuchino-pergamino-8oz.jpg"
+    }
+    ,
+    {
+        "id": 16,
+        "nombre": "CAPUCHINO PERGAMINO 12.OZ",
+        "descripcion": "Capuchino especial mediano",
+        "precio": 90.00,
+        "imagen": "./recursos/menu/capuchino-pergamino-12oz.jpg"
+    }
+    ,
+    {
+        "id": 17,
+        "nombre": "ICE COFFEE 16.OZ",
+        "descripcion": "Café frío grande",
+        "precio": 60.00,
+        "imagen": "./recursos/menu/ice-coffee-16oz.jpg"
+    }
+    ,
+    {
+        "id": 18,
+        "nombre": "ICE LATTE 16.OZ",
+        "descripcion": "Latte frío grande",
+        "precio": 75.00,
+        "imagen": "./recursos/menu/ice-latte-16oz.jpg"
+    }
+    ,
+    {
+        "id": 19,
+        "nombre": "ICE LATTE MOCA 16.OZ",
+        "descripcion": "Latte con mocha frío",
+        "precio": 95.00,
+        "imagen": "./recursos/menu/ice-latte-moca-16oz.jpg"
+    }
+    ,
+    {
+        "id": 20,
+        "nombre": "BATIDOS DE FRUTAS 16.OZ",
+        "descripcion": "Batido natural grande",
+        "precio": 90.00,
+        "imagen": "./recursos/menu/batido-frutas-16oz.jpg"
+    }
+    ,
+    {
+        "id": 21,
+        "nombre": "POSTRE DEL DIA",
+        "descripcion": "Postre de selección",
+        "precio": 100.00,
+        "imagen": "./recursos/menu/postre-del-dia.jpg"
+    }
+
+]
+  

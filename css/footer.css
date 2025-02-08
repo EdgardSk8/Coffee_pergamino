@@ -1,0 +1,40 @@
+footer {
+    background-color: #002855; /* Color de fondo azul oscuro */
+    color: white;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    text-align: right;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 10px;
+}

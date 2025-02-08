@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- referencias -->
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cuerpo.css">
+    <link rel="stylesheet" href="./css/contenedores.css">
+    <link rel="stylesheet" href="./css/card-menu.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/modal.css">
+
+    <script src="./js/mostrarmenujson.js" defer></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="index.html"><img src="./recursos/logo.jpg" alt="Logo" class="logo"></a>
+
+        <ul>
+            <li><a href="#menu-container">Inicio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-5" id="menu-container"></div>
+
+    <button class="btnorder" id="btnOrder">🛒 Ver Pedido</button>
+
+    <div id="orderModal" class="modal"> 
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tu Pedido</h2>
+            <div id="orderDetails"></div>
+            <h3 style="margin-top: 20px;">Total: C$ <span id="totalPrice">0</span></h3>
+            <button id="whatsapp-button">Pedir por Whatsapp</button>
+        </div>
+    </div>
+
+    <section id="contacto"></section>
+    <footer>
+        <div class="container">
+            <div class="left">
+                <h4 style="color: #FFCCBC;">Horario</h4> <br>
+                <p>Lunes a Viernes: 7:00 AM - 8:00 PM</p> <br>
+                <p>Sábados y Domingos: 8:00 AM - 6:00 PM</p>
+            </div>
+    
+            <div class="right">
+                <div class="contact-info">
+                    <p>Correo: <a href="mailto:pergaminocoffe@gmail.com">pergaminocoffe@gmail.com</a></p> <br>
+                    <p>Teléfono: <a href="tel:+50578021069">(+505) 7802-1069</a></p> <br>
+                    <span>Dirección: Parque el Indio, una cuadra al este, 50 metros hacia el sur. León, Nicaragua</span>
+                </div>
+    
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/15xdAAPFgV/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/50578021069" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
