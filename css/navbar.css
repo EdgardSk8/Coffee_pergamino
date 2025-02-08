@@ -44,9 +44,56 @@
 
 .logo {
     position: absolute;
-    left: 20px;
-    top: 5px;
-    height: 50px;
-    border-radius: 5px;
+    left: 20px;               
+    top: 50%;                  
+    transform: translateY(-50%);  
+    height: auto; /* Mantiene la proporción original */
+    max-height: 50px; /* Tamaño máximo */
+    border-radius: 8px; /* Bordes redondeados */
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Suaviza los efectos */
+}
+
+/* Efecto hover: oscurece la imagen con transparencia */
+.logo:hover {
+    filter: brightness(0.7); /* Reduce el brillo al 70% */
+}
+
+/* Efecto clic: simula presión */
+.logo:active {
+    transform: translateY(-45%) scale(0.9); /* Se reduce un poco */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Reduce la sombra */
+}
+
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: flex-end; /* Alinea los elementos al final (derecha) en móviles */
+    }
+
+    .navbar ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin-right: 15px; /* Espacio entre los elementos en la parte derecha */
+    }
+
+    .logo {
+        left: 10px; /* Ajusta la posición de la logo para que no esté tan cerca del borde */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar ul {
+        gap: 5px; /* Reduce el espacio entre los elementos en pantallas más pequeñas */
+    }
+
+    .navbar ul li {
+        margin-right: 10px; /* Reduce el margen entre los elementos */
+    }
 }

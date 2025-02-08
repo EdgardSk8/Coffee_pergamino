@@ -1,6 +1,6 @@
 .contenedor-5 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Define 3 columnas */
+    grid-template-columns: repeat(2, 1fr); /* Define 2 columnas */
     gap: 20px; /* Espacio entre las tarjetas */
     padding: 20px; /* Espaciado interno alrededor del contenedor */
 }
@@ -9,9 +9,8 @@
     display: flex;
     width: 100%; /* Asegúrate de que las tarjetas ocupen el 100% del ancho disponible */
     height: 250px;
-    margin-bottom: 20px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #aa79174f;
     border: 2px solid #ddd;
     font-size: 14px;
     overflow: hidden;
@@ -64,45 +63,45 @@
     gap: 10px;
 }
 
-.btncantidad{
-    background-color: #dab68d;
+.btncantidad {
+    background-color: #aa8152;
     height: 30px;
     width: 30px;
     cursor: pointer;
     border: 1px solid #c7a783;
     border-radius: 8px;
 }
-.btncantidad:hover{
+
+.btncantidad:hover {
     background-color: #b19473;
 }
 
-.cantidad{
+.cantidad {
     font-size: 25px;
     font-weight: bold;
 }
 
-.card-title{
+.card-title {
     font-weight: bold;
     color: rgb(68, 41, 0);
     font-size: 30px;
-    margin: 0px 0px 20px 0px; /*margin-bottom*/
+    margin: 0px 0px 20px 0px; /* margin-bottom */
 }
 
-.card-description{
+.card-description {
     font-weight: bold;
     color: rgb(100, 49, 2);
     font-size: 15px;
-    margin: 0px 0px 20px 0px; /*margin-bottom*/
+    margin: 0px 0px 20px 0px; /* margin-bottom */
 }
 
-.card-precio{
+.card-precio {
     font-weight: bold;
     color: rgb(68, 41, 0);
     font-size: 15px;
 }
 
-/*boton de ver pedido*/
-
+/* Botón de ver pedido */
 .btnorder {
     position: fixed;
     bottom: 30px;
@@ -121,4 +120,60 @@
 .btnorder:hover {
     transform: scale(1.1);
     background-color: #8b5530;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contenedor-5 {
+        grid-template-columns: repeat(1, 1fr); /* Una columna en pantallas más pequeñas */
+        padding: 15px; /* Reduce el espaciado interno en pantallas pequeñas */
+    }
+
+    .card {
+        height: auto; /* Ajusta la altura de las tarjetas para pantallas pequeñas */
+    }
+
+    .card-title {
+        font-size: 24px; /* Reduce el tamaño del título */
+    }
+
+    .card-description {
+        font-size: 14px; /* Reduce el tamaño de la descripción */
+    }
+
+    .card-precio {
+        font-size: 13px; /* Reduce el tamaño del precio */
+    }
+
+    .btnorder {
+        bottom: 20px; /* Ajusta la posición del botón en pantallas pequeñas */
+        right: 20px; /* Ajusta la posición del botón en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor-5 {
+        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+        padding: 10px; /* Reduce aún más el espaciado interno */
+    }
+
+    .card {
+        height: 200px; /* Ajusta la altura de las tarjetas */
+    }
+
+    .card-title {
+        font-size: 20px; /* Reduce aún más el tamaño del título */
+    }
+
+    .card-description {
+        font-size: 13px; /* Ajusta el tamaño de la descripción */
+    }
+
+    .card-precio {
+        font-size: 12px; /* Ajusta el tamaño del precio */
+    }
+
+    .btnorder {
+        padding: 12px 15px; /* Ajusta el tamaño del botón */
+    }
 }

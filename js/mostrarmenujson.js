@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 img.alt = item.nombre;
 
                 // Efecto al pasar el mouse
-                img.addEventListener("mouseover", () => img.style.transform = "scale(1.05) rotate(2deg)");
-                img.addEventListener("mouseout", () => img.style.transform = "scale(1) rotate(0)");
+                card.addEventListener("mouseover", () => img.style.transform = "scale(1.05) rotate(2deg)");
+                card.addEventListener("mouseout", () => img.style.transform = "scale(1) rotate(0)");
 
                 cardImagen.appendChild(img);
 
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("whatsapp-button")?.addEventListener("click", () => {
         const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
-        let mensaje = "Buen dia! \n Me gustaria ordenar: \n\n";
+        let mensaje = "Buen dia! \nMe gustaria ordenar: \n\n";
     
         let total = 0;
         pedidos.forEach(pedido => {

@@ -21,7 +21,7 @@
     overflow-y: auto;
     text-align: center;
     clip-path: inset(0 round 10px);
-    border: 2px solid black;
+    border: 2px solid rgb(95, 92, 92);
 }
 
 /* Botón de cierre */
@@ -96,4 +96,47 @@
     background-size: contain;
 }
 
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Modal */
+    .modal-content {
+        width: 90%;
+    }
 
+    /* Pedido Items */
+    .pedido-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pedido-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Botón de WhatsApp */
+    #whatsapp-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Modal */
+    .modal-content {
+        width: 95%;
+    }
+
+    /* Botón de WhatsApp */
+    #whatsapp-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* Pedido Items */
+    .pedido-item {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+    }
+}

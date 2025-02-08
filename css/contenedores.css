@@ -1,76 +1,121 @@
 .contenedor-1 {
     display: flex;
     padding: 10px;
-    border: 1px solid black;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    scroll-margin-top: 90px;
 }
 
-.imagen-1{
-    height: 700px;
+.imagen-1 {
+    height: 400px;
     width: auto;
 }
 
 .mini-1 {
     display: flex;
     padding: 20px;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos dentro de mini-1 */
-    text-align: center; /* Asegura que el texto también esté centrado */
-    flex: 1; /* Ocupar el espacio disponible */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
     gap: 20px;
+}
+
+.mini-1 h1{
+    color: rgb(83, 55, 3);
+    font-size: 100px;
+}
+
+.mini-1 h3{
+    color: rgb(131, 92, 21);
+    font-size: 50px;
+}
+
+.mini-1 p{
+    color: rgb(58, 38, 0);
+    font-size: 20px;
 }
 
 /*--------------------------------------------------------------------------------------------------*/
 
-.contenedor-2{
+.contenedor-2 {
     display: flex;
     padding: 10px;
-    border: 1px solid black;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
-.mini-2-1{
+.mini-2-1 {
     display: flex;
     padding: 20px;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos dentro de mini-1 */
-    text-align: center; /* Asegura que el texto también esté centrado */
-    flex: 1; /* Ocupar el espacio disponible */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
     gap: 20px;
+}
+
+.mini-2-2 {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    gap: 20px;
+}
+
+.mini-2-1 h1{
+    color: rgb(83, 55, 3);
+    font-size: 50px;
+}
+
+.mini-2-1 p{
+    color: rgb(131, 92, 21);
+    font-size: 20px;
 }
 
 .imagen-2{
+    height: 400px;
+    border-radius: 20px;
+}
+
+.imagen-3{
     height: 600px;
-    width: auto;
+    border-radius: 20px;
 }
 
 /*--------------------------------------------------------------------------------------------------*/
 
-.contenedor-3{
+.contenedor-3 {
     display: flex;
     padding: 40px;
     border-radius: 70px;
-    border: 1px solid black;
     background-color: #b9966a;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    margin: 50px 200px;
 }
 
-.mini-3-1{
+.mini-3-1 {
     display: flex;
-    padding: 20px;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos dentro de mini-1 */
-    text-align: center; /* Asegura que el texto también esté centrado */
-    flex: 1; /* Ocupar el espacio disponible */
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    gap: 10px;
+    height: 250px;
 }
 
 .mini-3-2{
     display: flex;
-    padding: 20px;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos dentro de mini-1 */
-    text-align: center; /* Asegura que el texto también esté centrado */
-    flex: 1; /* Ocupar el espacio disponible */
-    gap: 20px;
+    gap: 10px;
+    height: 250px;
+
 }
+
+.imagen-4 {
+    border-radius: 20px;
+    height: 100%;
+    width: auto;
+}
+
 
 .btnordenar {
     padding: 10px 20px;
@@ -100,7 +145,6 @@
     background: #8f785d;
     transition: height 0.8s ease;
     z-index: -1;
-    color: #000000;
 }
 
 .btnordenar:hover::before {
@@ -113,41 +157,112 @@
 
 /*--------------------------------------------------------------------------------------------------*/
 
-.contenedor-4{
+.contenedor-4 {
     display: flex;
     padding: 10px;
     border: 1px solid black;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    
 }
 
-.mini-4-1{
+.mini-4-1 {
     display: flex;
     padding: 20px;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos dentro de mini-1 */
-    text-align: center; /* Asegura que el texto también esté centrado */
-    flex: 1; /* Ocupar el espacio disponible */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 20px;
 }
 
-.mini-4-2{
+.mini-4-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas */
-    grid-template-rows: 1fr 1fr; /* 2 filas */
-    gap: 30px; /* Espacio entre los elementos */
-    width: 750px; /* Ajusta el tamaño según necesites */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    width: 750px;
     border: 2px solid rgb(17, 0, 255);
     padding: 30px;
 }
 
-.items{
+.mini-4-3 {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+    text-align: right; /* Asegura que el texto también se alinee a la derecha */
+    gap: 20px;
+    border: 1px solid black;
+}
+
+.imagen-5{
+    height: 300px;
+    border-radius: 20px;
+}
+
+.items {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: lightgray;
     border: 1px solid black;
-    height: 100px; /* Ajusta la altura según tu diseño */
+    height: 100px;
 }
 
 /*--------------------------------------------------------------------------------------------------*/
 /*----------------------------------  productos.html  ---------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------*/
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Contenedores */
+    .contenedor-1, .contenedor-2, .contenedor-3, .contenedor-4 {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    /* Imagenes */
+    .imagen-1, .imagen-2, .imagen-3 {
+        height: 300px;
+        width: 100%;
+    }
+
+    /* Botón de ordenar */
+    .btnordenar {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Contenedor 4 Mini 2 */
+    .mini-4-2 {
+        width: 100%;
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes más finos para pantallas muy pequeñas */
+    .imagen-1, .imagen-2 {
+        height: 300px;
+    }
+
+    .btnordenar {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* Ajustes para el contenedor 3 */
+    .contenedor-3 {
+        padding: 20px;
+    }
+
+    /* Contenedor 4 Mini 2 */
+    .mini-4-2 {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    /* Mini-1 y Mini-2 en contenedores */
+    .mini-1, .mini-2-1 {
+        flex: 1;
+    }
+}
