@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("whatsapp-button")?.addEventListener("click", () => {
         const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
-        let mensaje = "Pedido:\n\n";
+        let mensaje = "Buen dia! \n Me gustaria ordenar: \n\n";
     
         let total = 0;
         pedidos.forEach(pedido => {
