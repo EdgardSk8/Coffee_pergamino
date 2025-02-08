@@ -66,8 +66,6 @@
 }
 
 
-
-
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     .navbar {
@@ -75,16 +73,49 @@
     }
 
     .navbar ul {
-        display: flex;
-        gap: 10px;
+        display: none; /* Oculta los elementos del menú por defecto */
+        position: absolute; /* Coloca el menú sobre el contenido */
+        top: 60px; /* Ajusta la posición del menú según sea necesario */
+        right: 0;
+        background-color: #333; /* Fondo oscuro para el menú */
+        flex-direction: column; /* Coloca los elementos verticalmente */
+        padding: 10px 0;
+        border-radius: 5px;
+        width: 200px; /* Ancho del menú */
+        z-index: 1000;
+        opacity: 0; /* Comienza invisible */
+        transform: translateX(100%); /* Comienza desplazado fuera de la pantalla a la derecha */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Animaciones suaves */
+    }
+
+    .navbar ul.show {
+        display: flex; /* Muestra el menú */
+        opacity: 1; /* Hace el menú visible */
+        transform: translateX(0); /* Desplaza el menú a su posición original (0) */
     }
 
     .navbar ul li {
-        margin-right: 15px; /* Espacio entre los elementos en la parte derecha */
+        margin: 10px 0; /* Espaciado vertical entre los elementos */
+        text-align: center;
     }
 
-    .logo {
-        left: 10px; /* Ajusta la posición de la logo para que no esté tan cerca del borde */
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar .menu-toggle {
+        display: block; /* Muestra el botón de hamburguesa */
+        cursor: pointer;
+    }
+
+    .navbar .menu-toggle span {
+        background-color: #ffffff;
+        width: 30px;
+        height: 3px;
+        margin: 6px 0;
+        display: block;
+        transition: 0.4s;
     }
 }
 
@@ -97,3 +128,5 @@
         margin-right: 10px; /* Reduce el margen entre los elementos */
     }
 }
+
+

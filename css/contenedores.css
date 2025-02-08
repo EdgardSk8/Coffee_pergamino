@@ -234,7 +234,7 @@
 @media screen and (max-width: 768px) {
     .contenedor-3 {
         margin: 0;
-        padding: 20px;
+        padding: 0px;
     }
 
     .mini-3-1 h1 {
@@ -245,17 +245,24 @@
         font-size: 18px;
     }
 
+    .mini-3-1{
+        flex: 1;
+    }
+
     .mini-3-2 {
         max-width: 100%; /* Limita el ancho al 100% del contenedor */
         overflow: hidden; /* Evita desbordamientos */
         display: flex;
-        justify-content: center;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
     }
-
+    
     .imagen-4 {
-        height: auto; /* Mantiene la proporción de la imagen */
+        height: 120px; /* Mantiene la proporción de la imagen */
         max-width: 100%; /* Evita que la imagen sobrepase su contenedor */
+        object-fit: contain; /* Asegura que la imagen se ajuste dentro sin recortarse */
     }
+    
 }
 
 

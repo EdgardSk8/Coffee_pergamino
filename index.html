@@ -15,6 +15,11 @@
     <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html"><img src="./recursos/logo.jpg" alt="Logo" class="logo"></a>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobreus">Sobre Nosotros</a></li>
@@ -22,6 +27,16 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.navbar .menu-toggle').addEventListener('click', function() {
+                const menu = document.querySelector('.navbar ul');
+                menu.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar el menú
+            });
+        });
+    </script>
+    
 
     <!-- Principal -->
 
@@ -37,6 +52,7 @@
         </div>
     </div>
 
+        <!-- Sobre Nosotros -->
     <div class="contenedor-2" id="sobreus">
 
         <div class="mini-2-2">
@@ -67,7 +83,7 @@
 
     </div>
 
-    
+
 
     <div class="contenedor-4">
 
