@@ -70,6 +70,7 @@
 @media screen and (max-width: 768px) {
     .navbar {
         justify-content: flex-end; /* Alinea los elementos al final (derecha) en móviles */
+        transition: opacity 0.3s ease, transform 0.9s ease;
     }
 
     .navbar ul {
@@ -85,7 +86,7 @@
         z-index: 1000;
         opacity: 0; /* Comienza invisible */
         transform: translateX(100%); /* Comienza desplazado fuera de la pantalla a la derecha */
-        transition: opacity 0.3s ease, transform 0.3s ease; /* Animaciones suaves */
+        transition: opacity 0.3s ease, transform 0.9s ease; /* Animaciones suaves */
     }
 
     .navbar ul.show {

@@ -22,11 +22,25 @@
 
         <a href="index.html"><img src="./recursos/logo.jpg" alt="Logo" class="logo"></a>
 
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+
         <ul>
             <li><a href="#menu-container">Inicio</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.navbar .menu-toggle').addEventListener('click', function() {
+                const menu = document.querySelector('.navbar ul');
+                menu.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar el menú
+            });
+        });
+    </script>
 
     <div class="contenedor-5" id="menu-container"></div>
 
