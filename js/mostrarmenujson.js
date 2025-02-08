@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${pedido.imagen}" class="pedido-img">
                 <div class="pedido-info">
                     <p class="pedido-nombre">${pedido.nombre} <span class="pedido-cantidad">x${pedido.cantidad}</span></p>
-                    <p class="pedido-precio">C$${pedido.precio * pedido.cantidad}</p>
+                    <p class="pedido-precio">C$${pedido.precio * pedido.cantidad} Cordobas</p>
                 </div>
             `;
     
@@ -164,11 +164,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
         let total = 0;
         pedidos.forEach(pedido => {
-            mensaje += `${pedido.nombre} x${pedido.cantidad} - C$${pedido.precio * pedido.cantidad}\n`;
-            total += pedido.precio * pedido.cantidad;
+            mensaje += `${pedido.nombre} x${pedido.cantidad} - C$${pedido.precio * pedido.cantidad} Cordobas\n`;
+            total += pedido.precio * pedido.cantidad; 
         });
     
-        mensaje += `\nTotal a pagar: C$${total}`;
+        mensaje += `\nTotal a pagar: C$${total} Cordobas`;
     
         // Número de WhatsApp al que enviar el mensaje (sin el "+")
         const numeroWhatsApp = "50578021069"; // Cambia este número por el real
