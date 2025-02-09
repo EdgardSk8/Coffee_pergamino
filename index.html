@@ -24,6 +24,7 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobreus">Sobre Nosotros</a></li>
             <li><a href="#ordenar">Ordenar</a></li>
+            <li><a href="#cursos">Cursos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -32,7 +33,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.navbar .menu-toggle').addEventListener('click', function() {
                 const menu = document.querySelector('.navbar ul');
-                menu.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar el menú
+                menu.classList.toggle('show');
             });
         });
     </script>
@@ -84,7 +85,7 @@
     </div>
 
 
-
+    <!-- Extra -->
     <div class="contenedor-4">
 
         <div class="mini-4-3">
@@ -119,10 +120,37 @@
         </div>
     </div>
 
-    <!-- Contacto -->
-    <section id="contacto"></section>
+    <div class="contenedor-6" id="cursos">
+        
+        <h1>Nuestros Cursos de Barista</h1>
 
-    <footer>
+        <div class="mini-contenedor-6">
+
+            <div class="mini-6-1">
+                <img src="./recursos/muestra-4.jpg" alt="Imagen curso">
+            </div>
+
+            <div class="mini-6-2">
+                <p>¡Vuélvete un emprendedor y crece en tu propia cafetería con nuestra ayuda! </p>
+                <img src="./recursos/muestra-5.jpg" alt="Imagen adicional">
+            </div>
+
+        </div>
+    
+        <div class="contenedor-curso">
+
+            <button class="inscribircurso">
+                <p>Regístrate ahora en nuestro curso</p>
+                <a href="https://wa.me/50578021069?text=Hola,%20estoy%20interesado%20en%20inscribirme%20en%20el%20curso%20de%20barista" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Inscribir al curso
+                </a>
+            </button>
+        </div>
+        
+    </div>
+    
+    <!-- Contacto -->
+    <footer id="contacto">
         <div class="container">
             <div class="left">
                 <h4 style="color: #FFCCBC;">Horario</h4> <br>
@@ -134,7 +162,7 @@
                 <div class="contact-info">
                     <p>Correo: <a href="mailto:pergaminocoffe@gmail.com">pergaminocoffe@gmail.com</a></p> <br>
                     <p>Teléfono: <a href="tel:+50578021069">(+505) 7802-1069</a></p> <br>
-                    <span>Dirección: Parque el Indio, una cuadra al este, 50 metros hacia el sur. León, Nicaragua</span>
+                    <span>Dirección: Gasolinera UNO Sutiava 2 Cuadras al Norte 50 metros al este. León, Nicaragua</span>
                 </div>
     
                 <div class="social-icons">
