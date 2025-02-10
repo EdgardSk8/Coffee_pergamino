@@ -279,14 +279,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 
 .mini-4-1 {
     display: flex;
+    flex: 1;
     padding: 20px;
     flex-direction: column;
     align-items: center;
@@ -303,16 +303,45 @@
     padding: 30px;
 }
 
+.item{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #b99266;
+    transition: transform 0.5s ease;
+}
+
+.item:hover {
+    transform: translate(0px, -8px);
+}
+
+.item h4{
+    color: #473014;
+    margin-bottom: 4px;
+}
+
+.item p{
+    color: #473014;
+}
+
+.mini-4-1 h1{
+    color: #473014;
+    font-size: 40px;
+}
+
+.mini-4-1 p{
+    color: #473014;
+}
+
 .mini-4-3 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
-    gap: 20px;
+    flex: 1;
 }
 
 .imagen-5 {
-    height: 300px;
+    height: 350px;
     border-radius: 20px;
     transition: transform 0.2s ease;
 }
@@ -407,7 +436,7 @@
     display: inline-block;
     border: none;
     background: none;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .inscribircurso a {
@@ -457,3 +486,68 @@
 }
 
 /*----------------------------------------------------------------------------------------------------*/
+
+/* 🔹 CONTENEDOR 6 */
+
+.contenedor-7 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-7 h1 {
+    font-size: 5vw; /* Tamaño dinámico en función del ancho de la pantalla */
+    color: rgb(83, 55, 3);
+    margin-bottom: 20px;
+}
+
+.mini-7-1 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes pasen a otra línea en pantallas pequeñas */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.mini-7-1 img {
+    height: 500px;
+    max-height: 500px;
+    max-width: 100%; /* Evita que las imágenes se desborden en pantallas pequeñas */
+    border-radius: 20px;
+    border: 1px solid #d1c49e;
+    transition: transform 0.2s ease;
+}
+
+.mini-7-1 img:hover{
+    transform: translate(0px, -3px);
+}
+
+/* 🔹 Responsive para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .mini-7-1 img {
+        height: 400px;
+        max-height: 400px;
+    }
+}
+
+/* 🔹 Responsive para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .contenedor-7 h1 {
+        font-size: 6vw; /* Ajuste dinámico para móviles */
+    }
+
+    .mini-7-1 {
+        flex-direction: column; /* Apilar imágenes en móviles */
+    }
+
+    .mini-7-1 img {
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        max-height: 300px; /* Limita la altura en móviles */
+        width: 90%; /* Reduce el tamaño para que no ocupe toda la pantalla */
+    }
+}
+
