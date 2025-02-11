@@ -1,0 +1,146 @@
+.contenedorbio-1 {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    align-items: stretch; /* Hace que ambas columnas tengan la misma altura */
+    flex-wrap: wrap; /* Evita que más de dos columnas se alineen en la misma fila */
+}
+
+.columna {
+    display: flex;
+    flex-direction: column; /* Elementos dentro alineados verticalmente */
+    flex: 1; /* Ambas columnas ocupan el mismo espacio disponible */
+    padding: 10px;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+    min-width: 45%; /* Asegura que no se reduzcan demasiado en pantallas pequeñas */
+}
+
+.columna div {
+    width: 100%; /* Ocupará todo el ancho disponible de la columna */
+    min-height: 150px; /* Ajusta la altura mínima para uniformidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna img {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    object-fit: cover; 
+}
+
+.minibio-1-1{
+    scroll-margin-top: 110px;
+}
+
+.minibio-2-1{
+    scroll-margin-top: 70px;
+}
+
+
+.minibio-1-1,
+.minibio-1-2,
+.minibio-2-1,
+.minibio-2-2,
+.minibio-3-1,
+.minibio-3-2,
+.minibio-4-1,
+.minibio-4-2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 10px;
+}
+
+/*-----------------------------------------------------------------*/
+/*Numeraciones*/
+/*-----------------------------------------------------------------*/
+
+.enumeracion {
+    counter-reset: contador; /* Inicializa el contador */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centra los elementos verticalmente */   
+}
+
+.enumeracion p {
+    counter-increment: contador; /* Aumenta el contador */
+    position: relative;
+    padding-left: 25px; /* Espacio para el número */
+}
+
+.enumeracion p::before {
+    content: counter(contador) ". "; /* Agrega la numeración */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: rgb(83, 55, 3);
+}
+
+/*-----------------------------------------------------------------*/
+/*Perzonalizacion*/
+/*-----------------------------------------------------------------*/
+
+/*clase minibio-1-1*/
+
+.minibio-1-1 h1,
+.minibio-1-2 h1,
+.minibio-2-1 h1,
+.minibio-2-2 h1,
+.minibio-3-1 h1,
+.minibio-3-2 h1,
+.minibio-4-1 h1,
+.minibio-4-2 h1
+{
+    color: rgb(83, 55, 3);
+    font-size: 50px;
+}
+
+h3, h2{
+    color: rgb(83, 55, 3)
+}
+
+.minibio-1-1 p,
+.minibio-1-2 p,
+.minibio-2-1 p,
+.minibio-2-2 p,
+.minibio-3-1 p,
+.minibio-3-2 p,
+.minibio-4-1 p,
+.minibio-4-2 p
+{
+    color:  rgb(58, 38, 0);
+}
+
+.contenedorbio-2 {
+    display: flex; /* Evita que se alinee junto a .contenedorbio-1 */
+    width: 100%; /* Ocupa toda la línea */
+    gap: 20px; /* Espacio entre columnas */
+    scroll-margin-top: 88px;
+}
+
+.contenedorbio-2 div {
+    flex: 1; 
+    display: flex;
+    align-items: center; 
+}
+
+.contenedorbio-2 img {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    object-fit: cover; 
+}
+
+
+
+
+
+

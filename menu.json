@@ -159,14 +159,7 @@
         "precio": 90.00,
         "imagen": "./recursos/menu/batido-frutas-16oz.jpg"
     }
-    ,
-    {
-        "id": 21,
-        "nombre": "POSTRE DEL DIA",
-        "descripcion": "Postre de selección",
-        "precio": 100.00,
-        "imagen": "./recursos/menu/postre-del-dia.jpg"
-    }
+
 
 ]
   

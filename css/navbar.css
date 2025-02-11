@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
+    background-color:  #88673f;
     padding: 15px;
     position: fixed; /* Mantiene la navbar fija en la parte superior */
     top: 0;
@@ -25,22 +25,28 @@
     padding: 0;
 }
 
+.navbar ul li {
+    transition: background-color 0.2s ease-in-out; /* Suaviza el cambio de color */
+    border-radius: 5px;
+}
+
 .navbar ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     padding: 10px 15px;
     display: block;
+    transition: color 0.2s ease-in-out; /* Suaviza el cambio de color del texto */
 }
 
 .navbar ul li:hover {
-    background-color: #555;
-    border-radius: 5px;
+    background-color: #aa8557;
 }
 
 .navbar ul li:hover a {
-    color: #ddd;
+    color: #4e3412;
 }
+
 
 .logo {
     position: absolute;
@@ -73,7 +79,7 @@
         position: absolute; /* Coloca el menú sobre el contenido */
         top: 60px; /* Ajusta la posición del menú según sea necesario */
         right: 0;
-        background-color: #333; /* Fondo oscuro para el menú */
+        background-color: #88673f; /* Fondo oscuro para el menú */
         flex-direction: column; /* Coloca los elementos verticalmente */
         padding: 10px 0;
         border-radius: 5px;

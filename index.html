@@ -31,9 +31,18 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('.navbar .menu-toggle').addEventListener('click', function() {
-                const menu = document.querySelector('.navbar ul');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.navbar ul');
+    
+            menuToggle.addEventListener('click', function(event) {
                 menu.classList.toggle('show');
+                event.stopPropagation(); // Evita que el clic se propague al documento
+            });
+    
+            document.addEventListener('click', function(event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    menu.classList.remove('show'); // Cierra el menú si se hace clic fuera
+                }
             });
         });
     </script>
@@ -45,7 +54,7 @@
         <div class="mini-1">
             <h1>Coffee Pergamino</h1>
             <h3>La historia detras de un taza</h3>
-            <p>Descubre Pergamino, un café artesanal de calidad excepcional que eleva cada momento. Cultivado en las mejores tierras...</p>
+            <p>La mayoría de las bebidas a base de café tienen como esencia el espresso, y su sabor puede verse comprometido si no se prepara adecuadamente. Aquí te enseñaremos cómo hacer un espresso perfecto, asegurando que cada bebida sea una experiencia inolvidable.</p>
         </div>
 
         <div class="mini-2">
@@ -62,7 +71,7 @@
         
         <div class="mini-2-1">
             <h1>SOBRE NOSOTROS</h1>
-            <p>Descubre Pergamino, un café artesanal de calidad excepcional que eleva cada momento. Cultivado en las mejores tierras...</p>
+            <p>Descubre Pergamino, un café artesanal de calidad excepcional que eleva cada momento. Cultivado en las mejores tierras.</p>
             <img src="./recursos/sobrenosotros2.jpg" class="imagen-2" alt="">
         </div>
 
@@ -99,21 +108,21 @@
             
             <div class="mini-4-2">
     
-                <div class="item">
-                    <h4>Historia y tradición</h4>
-                    <p>El café se cultiva desde el siglo XIX.</p>
+                <div class="item" onclick="window.location.href='biografia.html'">
+                    <h4>Espresso</h4>
+                    <p>La esencia más pura del café y base de toda bebida del mismo</p>
                 </div>
-                <div class="item">
-                    <h4>Regiones productoras</h4>
-                    <p>Matagalpa y Jinotega lideran la producción.</p>
+                <div class="item" onclick="window.location.href='biografia.html'">
+                    <h4>¿Que es un Barista?</h4>
+                    <p>Un Barista es especialista en café, capacitado para explotar todo el potencial</p>
                 </div>
-                <div class="item">
-                    <h4>Café sostenible</h4>
-                    <p>Producido con métodos ecológicos.</p>
+                <div class="item" onclick="window.location.href='biografia.html'">
+                    <h4>¿Catador de Vinos?</h4>
+                    <p>Una bebida alcohólica a partir de fermentación del jugo</p>
                 </div>
-                <div class="item">
-                    <h4>Reconocimientos mundiales</h4>
-                    <p>Destacado por su sabor único y calidad.</p>
+                <div class="item" onclick="window.location.href='biografia.html'">
+                    <h4>Métodos de Extracción</h4>
+                    <p>El sabor del café depende de muchos factores como el tipo de grano</p>
                 </div>
     
             </div>
@@ -186,8 +195,20 @@
                     <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                     <a href="https://wa.me/50578021069" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
+                
             </div>
+            
         </div>
+
+        <p>📍 Nuestra ubicación:</p>
+            <iframe 
+                src="https://maps.app.goo.gl/FWwrhvrhf3N8A3FAA" 
+                width="100%" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
     </footer>
     
     <!-- Font Awesome para los íconos de redes -->

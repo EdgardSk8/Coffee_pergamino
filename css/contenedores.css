@@ -308,6 +308,7 @@
     padding: 10px;
     background-color: #b99266;
     transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
 .item:hover {
