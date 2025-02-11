@@ -128,36 +128,69 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function mostrarPedidoEnModal() {
-        const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
-        const orderDetails = document.getElementById("orderDetails");
-        const totalPrice = document.getElementById("totalPrice");
-    
-        if (!orderDetails || !totalPrice) return;
-    
-        orderDetails.innerHTML = "";
-        let total = 0;
-    
-        pedidos.forEach(pedido => {
-            const item = document.createElement("div");
-            item.classList.add("pedido-item");
-    
-            item.innerHTML = `
+        function mostrarPedidoEnModal() {
+            let pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+            const orderDetails = document.getElementById("orderDetails");
+            const totalPrice = document.getElementById("totalPrice");
+        
+            if (!orderDetails || !totalPrice) return;
+        
+            orderDetails.innerHTML = "";
+            let total = 0;
+        
+            pedidos.forEach((pedido, index) => {
+                const item = document.createElement("div");
+                item.classList.add("pedido-item");
+        
+                item.innerHTML = `
                 <img src="${pedido.imagen}" class="pedido-img">
                 <div class="pedido-info">
-                    <p class="pedido-nombre">${pedido.nombre} <span class="pedido-cantidad">x${pedido.cantidad}</span></p>
-                    <p class="pedido-precio">C$${pedido.precio * pedido.cantidad} Cordobas</p>
+                    <p class="pedido-nombre">${pedido.nombre}</p>
+                    <p class="pedido-precio">C$<span class="pedido-precio-total">${pedido.precio * pedido.cantidad}</span></p> <br>
+                    <div class="pedido-contador">
+                        <button class="btn-restar" data-index="${index}">-</button>
+                        <span class="pedido-cantidad">${pedido.cantidad}</span>
+                        <button class="btn-sumar" data-index="${index}">+</button>
+                    </div>
                 </div>
             `;
-    
-            orderDetails.appendChild(item);
-            total += pedido.precio * pedido.cantidad;
-        });
-    
-        totalPrice.textContent = total;
-        document.getElementById("orderModal").style.display = "flex";
-    }
+            
+        
+                orderDetails.appendChild(item);
+                total += pedido.precio * pedido.cantidad;
+            });
+        
+            totalPrice.textContent = total;
+            document.getElementById("orderModal").style.display = "flex";
+        
+            // **Eventos para los botones de sumar y restar dentro del modal**
+            document.querySelectorAll(".btn-sumar").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    let index = this.getAttribute("data-index");
+                    pedidos[index].cantidad++;
+                    actualizarPedidoModal(pedidos);
+                });
+            });
+        
+            document.querySelectorAll(".btn-restar").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    let index = this.getAttribute("data-index");
+                    if (pedidos[index].cantidad > 1) {
+                        pedidos[index].cantidad--;
+                    } else {
+                        pedidos.splice(index, 1); // **Elimina el producto si llega a 0**
+                    }
+                    actualizarPedidoModal(pedidos);
+                });
+            });
 
+            function actualizarPedidoModal(pedidos) {
+                localStorage.setItem("pedidos", JSON.stringify(pedidos));
+                mostrarPedidoEnModal(); // Vuelve a renderizar el modal con los cambios
+            }
+            
+        }
+    
     document.getElementById("whatsapp-button")?.addEventListener("click", () => {
         const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
         let mensaje = "Buen dia! \nMe gustaria ordenar: \n\n";
@@ -181,10 +214,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = url;  // Esto abrirá WhatsApp directamente con el mensaje
     });
     
-    
-    
-    
-
     // Cerrar modal
     const closeModal = document.querySelector(".close");
     if (closeModal) {

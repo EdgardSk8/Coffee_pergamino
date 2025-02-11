@@ -73,6 +73,34 @@
     border-radius: 8px;
 }
 
+.pedido-contador {
+    display: flex;  /* Usamos flexbox para alinear horizontalmente */
+    align-items: center;  /* Centra los elementos verticalmente */
+    gap: 5px;  /* Espacio entre los botones y la cantidad */
+}
+
+.pedido-precio {
+    display: inline-flex;
+    align-items: center; /* Alinea verticalmente el precio y los botones */
+}
+
+.btn-sumar, .btn-restar {
+    background-color: #aa8152;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: 1px solid #c7a783;
+    border-radius: 8px;
+}
+
+.pedido-cantidad {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 5px;  /* Añadimos un poco de espacio entre la cantidad y los botones */
+}
+
+
+
 .btncantidad:hover {
     background-color: #b19473;
 }
