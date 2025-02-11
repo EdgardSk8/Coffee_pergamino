@@ -1,6 +1,5 @@
 .contenedorbio-1 {
     display: flex;
-    gap: 20px; /* Espacio entre columnas */
     padding: 10px;
     max-width: 100%;
     margin: auto;
@@ -8,42 +7,12 @@
     flex-wrap: wrap; /* Evita que más de dos columnas se alineen en la misma fila */
 }
 
-.columna {
-    display: flex;
-    flex-direction: column; /* Elementos dentro alineados verticalmente */
-    flex: 1; /* Ambas columnas ocupan el mismo espacio disponible */
-    padding: 10px;
-    align-items: flex-start; /* Alinea los elementos en la parte superior */
-    min-width: 45%; /* Asegura que no se reduzcan demasiado en pantallas pequeñas */
-}
-
-.columna div {
-    width: 100%; /* Ocupará todo el ancho disponible de la columna */
-    min-height: 150px; /* Ajusta la altura mínima para uniformidad */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.columna div p {
-    text-align: left; /* O ajusta a 'right' o 'justify' según lo necesites */
-}
-
-.columna img {
-    height: 100%;
-    max-height: 400px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    object-fit: cover; 
-}
-
 .minibio-1-1{
     scroll-margin-top: 110px;
 }
 
 .minibio-2-1{
-    scroll-margin-top: 70px;
+    scroll-margin-top: 88px;
 }
 
 
@@ -59,6 +28,8 @@
     flex-direction: column; 
     align-items: center; /* Centra los elementos verticalmente */
     padding: 10px;
+    border: 5px solid rgba(107, 47, 12, 0.425);
+    margin: 10px;
 }
 
 /*-----------------------------------------------------------------*/
@@ -125,8 +96,7 @@ h3, h2{
 .contenedorbio-2 {
     display: flex; /* Evita que se alinee junto a .contenedorbio-1 */
     width: 100%; /* Ocupa toda la línea */
-    gap: 20px; /* Espacio entre columnas */
-    scroll-margin-top: 88px;
+    scroll-margin-top: 78px;
 }
 
 .contenedorbio-2 div {
@@ -144,37 +114,14 @@ h3, h2{
     object-fit: cover; 
 }
 
+.contenedor-movil{
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    max-height: 200px;
+}
+
 @media (max-width: 768px) {
-    .contenedorbio-1 {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; /* Reducir espacio entre columnas */
-        padding: 10px;
-    }
-
-    .columna {
-        flex: 1 1 48%; /* Mantener dos columnas en móviles */
-        min-width: 48%; /* Asegurar que las columnas ocupen casi la mitad del ancho */
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centrar contenido */
-    }
-
-    .columna div {
-        min-height: auto; /* Permitir ajuste dinámico de altura */
-        padding: 5px;
-        width: 100%; /* Asegurar que los elementos dentro ocupen todo el ancho de la columna */
-    }
-
-    .columna img {
-        width: 100%; /* Ajustar imagen al ancho de la columna */
-        max-width: 100%; /* Evitar que sobresalga */
-        height: auto; /* Mantener proporciones */
-        max-height: 250px; /* Reducir altura en móviles */
-        border-radius: 15px;
-    }
-
     .minibio-1-1 h1,
     .minibio-1-2 h1,
     .minibio-2-1 h1,
@@ -217,11 +164,16 @@ h3, h2{
     }
 
     .contenedor-movil {
+        width: 100%;
+        max-height: 600px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
+        flex-direction: column;
     }
+    
+
+    .contenedor-movil img {
+        height: 100%; /* Ajusta el tamaño para mejorar la visibilidad en móvil */
+        width: 100%;
+    }
+
 }
