@@ -1,7 +1,7 @@
 .contenedorbio-1 {
     display: flex;
     gap: 20px; /* Espacio entre columnas */
-    padding: 20px;
+    padding: 10px;
     max-width: 100%;
     margin: auto;
     align-items: stretch; /* Hace que ambas columnas tengan la misma altura */
@@ -23,6 +23,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.columna div p {
+    text-align: left; /* O ajusta a 'right' o 'justify' según lo necesites */
 }
 
 .columna img {
@@ -99,6 +103,7 @@
 {
     color: rgb(83, 55, 3);
     font-size: 50px;
+    text-align: center;
 }
 
 h3, h2{
@@ -139,8 +144,84 @@ h3, h2{
     object-fit: cover; 
 }
 
+@media (max-width: 768px) {
+    .contenedorbio-1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Reducir espacio entre columnas */
+        padding: 10px;
+    }
 
+    .columna {
+        flex: 1 1 48%; /* Mantener dos columnas en móviles */
+        min-width: 48%; /* Asegurar que las columnas ocupen casi la mitad del ancho */
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar contenido */
+    }
 
+    .columna div {
+        min-height: auto; /* Permitir ajuste dinámico de altura */
+        padding: 5px;
+        width: 100%; /* Asegurar que los elementos dentro ocupen todo el ancho de la columna */
+    }
 
+    .columna img {
+        width: 100%; /* Ajustar imagen al ancho de la columna */
+        max-width: 100%; /* Evitar que sobresalga */
+        height: auto; /* Mantener proporciones */
+        max-height: 250px; /* Reducir altura en móviles */
+        border-radius: 15px;
+    }
 
+    .minibio-1-1 h1,
+    .minibio-1-2 h1,
+    .minibio-2-1 h1,
+    .minibio-2-2 h1,
+    .minibio-3-1 h1,
+    .minibio-3-2 h1,
+    .minibio-4-1 h1,
+    .minibio-4-2 h1 {
+        font-size: 24px; /* Reducir tamaño de títulos en móviles */
+        text-align: center; /* Centrar los títulos */
+    }
 
+    .enumeracion {
+        align-items: center; /* Centrar numeración */
+    }
+
+    .enumeracion p {
+        padding-left: 15px; /* Ajustar espacio para numeración */
+    }
+
+    .contenedorbio-2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        scroll-margin-top: 50px;
+    }
+
+    .contenedorbio-2 div {
+        flex: 1 1 48%; /* Mantener dos columnas */
+        display: flex;
+        justify-content: center; /* Centrar contenido */
+    }
+
+    .contenedorbio-2 img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 250px;
+        border-radius: 15px;
+    }
+
+    .contenedor-movil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+}
