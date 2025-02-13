@@ -34,16 +34,24 @@
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.menu-toggle');
             const menu = document.querySelector('.navbar ul');
-    
+            const menuItems = menu.querySelectorAll('li'); // Selecciona todas las opciones del menú
+
             menuToggle.addEventListener('click', function(event) {
                 menu.classList.toggle('show');
                 event.stopPropagation(); // Evita que el clic se propague al documento
             });
-    
+
             document.addEventListener('click', function(event) {
                 if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
                     menu.classList.remove('show'); // Cierra el menú si se hace clic fuera
                 }
+            });
+
+            // Cierra el menú cuando se hace clic en una opción
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menu.classList.remove('show'); // Oculta el menú
+                });
             });
         });
     </script>
