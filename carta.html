@@ -115,15 +115,33 @@
         }
 
         /* Media Query para hacer el diseño más amigable en dispositivos pequeños */
-        @media (max-width: 768px) {
-            .tall-image, .square-image {
-                width: 100%;
-                height: auto;
-            }
-            h1 {
-                font-size: 30px;
-            }
-        }
+		@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tall-image, .square-image {
+        width: 90%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .inscribircurso a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .contenedor-curso p {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -132,16 +150,13 @@
     <div class="gallery" style="margin-top: 20px;">
         <div class="image-container tall-image">
             <img src="./recursos/menu-especial.jpg" alt="Tall Valentine's Image">
-            <div class="overlay">Happy Valentine's Day!</div>
         </div>
         <div>
             <div class="image-container square-image" style="margin-bottom: 20px;">
                 <img src="./recursos/menu-especial-2.jpg" alt="Square Valentine's Image 1">
-                <div class="overlay">Love is in the air</div>
             </div>
             <div class="image-container square-image">
                 <img src="./recursos/menu-especial-3.jpg" alt="Square Valentine's Image 2">
-                <div class="overlay">Be my Valentine</div>
             </div>
         </div>
 
