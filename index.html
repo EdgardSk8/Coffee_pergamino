@@ -13,202 +13,6 @@
 
 <body>
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Moved to head -->
-        <style>
-            .valen {
-                font-family: Arial, sans-serif;
-                background-image: url('./recursos/fondo-san.jpg'); /* Cambia 'ruta-de-tu-imagen.jpg' por la ubicación de tu imagen */
-                background-size: cover; /* Hace que la imagen cubra todo el fondo */
-                background-position: center; /* Centra la imagen */
-                background-repeat: no-repeat; /* Evita que la imagen se repita */
-                margin: 0;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-    
-            h1 {
-                color: #ff4d4d;
-                text-align: center;
-                font-size: 50px;
-            }
-    
-            .gallery {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-                max-width: 1200px;
-            }
-    
-            .image-container {
-                position: relative;
-                overflow: hidden;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
-                opacity: 0;
-                transform: translateY(20px);
-                animation: fadeInUp 1.8s forwards;
-            }
-    
-            @keyframes fadeInUp {
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-    
-            .image-container:hover {
-                transform: scale(1.05);
-            }
-    
-            .tall-image {
-                width: 400px;
-                height: 800px;
-                border-radius: 20px;
-            }
-    
-            .square-image {
-                width: 400px;
-                height: 400px;
-                border-radius: 20px;
-                gap: 20px;
-            }
-    
-           .image-container img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.2s ease;
-            }
-    
-            img:hover{
-                transform: scale(1.05);
-            }
-    
-            .inscribircurso {
-                display: inline-block;
-                border: none;
-                background: none;
-                margin-bottom: 0px;
-            }
-    
-            .inscribircurso a {
-                text-decoration: none;
-                background-color: #25D366; /* Color de fondo de WhatsApp */
-                color: white; /* Color del texto */
-                padding: 12px 25px; /* Espaciado dentro del botón */
-                border-radius: 50px; /* Bordes redondeados */
-                font-size: 18px; /* Tamaño del texto */
-                display: inline-flex;
-                align-items: center; /* Centrar el texto y el ícono */
-                gap: 15px; /* Espacio entre el ícono y el texto */
-                transition: background-color 0.5s ease, transform 0.2s ease; /* Transición suave para el hover */
-            }
-    
-            .inscribircurso a:hover {
-                background-color: #129241; /* Color más oscuro cuando el usuario pasa el ratón */
-                transform: translate(0px, 3px);
-            }
-    
-            .inscribircurso i {
-                font-size: 22px; /* Tamaño del ícono */
-                font-weight: bold; /* Negrita en el ícono */
-                display: inline-block;
-            }
-    
-            .contenedor-curso p {
-                font-weight: bold; /* Asegura que el texto también esté en negrita */
-                font-size: 30px;
-                margin: 20px;
-            }
-    
-            /* Media Query para hacer el diseño más amigable en dispositivos pequeños */
-           
-        @media (max-width: 768px) {
-            .gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .tall-image, .square-image {
-                width: 90%;
-                height: auto;
-            }
-
-            .san-valentin-wrapper h1 {
-                font-size: 28px;
-                text-align: center;
-            }
-
-            .inscribircurso a {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-
-            .contenedor-curso p {
-                font-size: 24px;
-                text-align: center;
-            }
-        }
-    
-        </style>
-    </head>
-    <body>
-
-        <div class="valen">
-            <h1 style="margin: 10px;">♡ Menu Especial San Valentin ♡</h1>
-    
-        <div class="gallery" style="margin-top: 10px;">
-            <div class="image-container tall-image">
-                <img src="./recursos/menu-especial.jpg" alt="Tall Valentine's Image">
-            </div>
-            <div>
-                <div class="image-container square-image" style="margin-bottom: 20px;">
-                    <img src="./recursos/menu-especial-2.jpg" alt="Square Valentine's Image 1">
-                </div>
-                <div class="image-container square-image">
-                    <img src="./recursos/menu-especial-3.jpg" alt="Square Valentine's Image 2">
-                </div>
-            </div>
-    
-            <div class="contenedor-curso">
-                <button class="inscribircurso">
-                    <p>Disfruta de un cafe de san Valentin</p>
-                    <a href="https://wa.me/50578021069?text=¡Buen%20día,%20me%20gustaría%20pedir%20la%20promoción%20de%20San%20Valentín!" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
-                    </a>
-                </button>
-            </div>
-        </div>
-    
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const targetImage = document.querySelector('img[src="./recursos/menu-especial.jpg"]'); // Selecciona la imagen específica
-                
-                targetImage.addEventListener('click', () => {
-                    const imgUrl = targetImage.src; // Obtener la URL de la imagen
-                    const link = document.createElement('a'); // Crear un enlace temporal
-                    link.href = imgUrl; // Asignar la URL de la imagen al atributo href
-                    link.download = imgUrl.split('/').pop(); // Asignar el nombre del archivo
-                    link.click(); // Iniciar la descarga
-                });
-            });
-        </script>
-        </div>
-        
-        
-    </body>
-    </html>
-    
-
-
     <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html"><img src="./recursos/logo.jpg" alt="Logo" class="logo"></a>
@@ -220,12 +24,40 @@
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobreus">Sobre Nosotros</a></li>
-            <li><a href="#ordenar">Ordenar</a></li>
+            <li><a href="#ordenar" class="ordenar-link">Ordenar</a></li>
             <li><a href="#historia">Historia</a></li>
             <li><a href="#cursos">Cursos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
+    
+    <style>
+        a.ordenar-link {
+            padding: 10px 20px; /* Espaciado */
+            font-weight: bold;  /* Texto en negrita */
+            border-radius: 10px; /* Bordes redondeados */
+            background-color: #8B4513; /* Color inicial */
+            color: white; /* Mantener color de texto */
+            transition: background-color 0.5s ease-in-out; /* Transición más lenta */
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let ordenarLink = document.querySelector('.ordenar-link');
+    
+            // Tonos de café para el fondo
+            let colors = ["#804000", "#905010", "#73400d"]; // Marrón oscuro, marrón medio, marrón claro
+            let index = 0;
+    
+            setInterval(() => {
+                ordenarLink.style.backgroundColor = colors[index]; // Cambia el color del fondo
+                index = (index + 1) % colors.length; // Ciclo infinito de colores
+            }, 1000); // Cambia cada 3 segundos para que la transición se vea mejor
+        });
+    </script>
+    
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -253,7 +85,6 @@
         });
     </script>
     
-
     <!-- Principal -->
 
     <div class="contenedor-1" id="inicio">
@@ -280,7 +111,6 @@
             <p>Descubre Pergamino, un café artesanal de calidad excepcional que eleva cada momento. Cultivado en las mejores tierras.</p>
             <img src="./recursos/sobrenosotros2.jpg" class="imagen-2" alt="">
         </div>
-
 
     </div>
 
@@ -312,13 +142,13 @@
             
             <div class="mini-4-2">
     
-                <div class="item" onclick="window.location.href='biografia.html#espresso'">
-                    <h4>Espresso</h4>
-                    <p>La esencia más pura del café y base de toda bebida del mismo</p>
-                </div>
                 <div class="item" onclick="window.location.href='biografia.html#barista'">
                     <h4>¿Que es un Barista?</h4>
                     <p>Un Barista es especialista en café, capacitado para explotar todo el potencial</p>
+                </div>
+                <div class="item" onclick="window.location.href='biografia.html#espresso'">
+                    <h4>Espresso</h4>
+                    <p>La esencia más pura del café y base de toda bebida del mismo</p>
                 </div>
                 <div class="item" onclick="window.location.href='biografia.html#vinos'">
                     <h4>¿Catador de Vinos?</h4>
@@ -332,7 +162,6 @@
             </div>
         </div>
     </div>
-    
 
     <div class="contenedor-6" id="cursos">
         
