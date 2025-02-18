@@ -2,8 +2,8 @@ body {
     font-family: "Microsoft Sans Serif", sans-serif;
     padding-top: 70px;
     overflow-x: hidden;
-    background-color: #dcdbbb;
-    background-image: url('../recursos/fondobody.png');  /* Cambia la ruta a la imagen de fondo */
+    background-color: #ecece2;
+    background-image: url('../recursos/fondobody2.png');  /* Cambia la ruta a la imagen de fondo */
     background-repeat: repeat-y;  /* Esto hace que la imagen se repita solo verticalmente */
     background-position: top center;  /* Ajusta la imagen al principio y la alinea en el centro horizontal */
     background-size: 100% auto;  /* Esto ajusta la imagen al tamaño original sin zoom */
