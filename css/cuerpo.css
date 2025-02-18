@@ -9,7 +9,6 @@ body {
     background-size: 100% auto;  /* Esto ajusta la imagen al tamaño original sin zoom */
 }
 
-
 ::-webkit-scrollbar {width: 12px;height: 12px;} /*Tamaño de barra*/
 ::-webkit-scrollbar-track {background: #f3fff3;} /*Fondo de la barra*/
 ::-webkit-scrollbar-thumb {background: #b8a68e;border-radius: 10px;} /*Marcador de la barra*/
