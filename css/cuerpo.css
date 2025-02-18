@@ -3,7 +3,12 @@ body {
     padding-top: 70px;
     overflow-x: hidden;
     background-color: #dcdbbb;
+    background-image: url('../recursos/fondobody.png');  /* Cambia la ruta a la imagen de fondo */
+    background-repeat: repeat-y;  /* Esto hace que la imagen se repita solo verticalmente */
+    background-position: top center;  /* Ajusta la imagen al principio y la alinea en el centro horizontal */
+    background-size: 100% auto;  /* Esto ajusta la imagen al tamaño original sin zoom */
 }
+
 
 ::-webkit-scrollbar {width: 12px;height: 12px;} /*Tamaño de barra*/
 ::-webkit-scrollbar-track {background: #f3fff3;} /*Fondo de la barra*/
@@ -13,4 +18,3 @@ body {
 html {
     scroll-behavior: smooth; /* Activa el desplazamiento suave */
 }
-

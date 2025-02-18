@@ -156,6 +156,7 @@
     flex-wrap: wrap;
     margin: 0px 200px;
     scroll-margin-top: 130px;
+    border: 2px solid #91734e;
 }
 
 .mini-3-1 {
@@ -164,11 +165,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 20px;
+    gap: 12px;
     height: 250px;
     width: fit-content;
     margin: auto;
-    padding: 25px;
+    padding: 15px;
 }
 
 .mini-3-1 h1 {
@@ -179,6 +180,12 @@
 .mini-3-1 h2 {
     color: rgb(78, 55, 13);
     font-size: 20px;
+}
+
+.mini-3-1 p {
+    color: rgb(58, 39, 8);
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .mini-3-2 {
@@ -237,6 +244,41 @@
     transform: scale(1.15)
 }
 
+.btninformacion {
+    padding: 8px 20px;
+    background: #4286ce; /* Azul comercial */
+    border: 2px solid #1e67b4; /* Borde más oscuro */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btninformacion:hover {
+    background: #074b94; /* Azul más oscuro al pasar el mouse */
+    border-color: #003f7f;
+    transform: scale(1.08); /* Efecto de ligero zoom */
+}
+
+/* Estilos para el icono */
+.btninformacion i {
+    font-size: 15px;
+}
+
+
+
 /* 📱 RESPONSIVE */
 @media screen and (max-width: 768px) {
     .contenedor-3 {
@@ -245,15 +287,24 @@
     }
 
     .mini-3-1 h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .mini-3-1 h2 {
-        font-size: 18px;
+        font-size: 15px;
+    }
+
+    .mini-3-1 p {
+        font-size: 12px;
     }
 
     .mini-3-1{
         flex: 1;
+    }
+
+    .btnordenar{
+        font-size: 10px;
+        padding: 8px 10px;
     }
 
     .mini-3-2 {
