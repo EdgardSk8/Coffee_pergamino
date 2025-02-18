@@ -11,8 +11,9 @@
     width: 100%; /* Asegúrate de que las tarjetas ocupen el 100% del ancho disponible */
     height: 200px;
     border-radius: 10px;
-    background-color: #aa79174f;
-    border: 2px solid #ddd;
+    /*background-color: #aa7917ce;*/
+    background-color: #aa7917c7;
+    border: 2px solid #855d0f46;
     font-size: 14px;
     overflow: hidden;
     cursor: pointer;
