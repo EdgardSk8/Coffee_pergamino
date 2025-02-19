@@ -54,7 +54,7 @@
     top: 50%;                  
     transform: translateY(-50%);  
     height: auto; /* Mantiene la proporción original */
-    max-height: 50px; /* Tamaño máximo */
+    max-height: 45px; /* Tamaño máximo */
     border-radius: 8px; /* Bordes redondeados */
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Suaviza los efectos */
@@ -118,6 +118,18 @@
         margin: 6px 0;
         display: block;
         transition: 0.4s;
+    }
+
+    .logo {
+        position: absolute;
+        left: 20px;               
+        top: 50%;                  
+        transform: translateY(-50%);  
+        height: auto; /* Mantiene la proporción original */
+        max-height: 35px; /* Tamaño máximo */
+        border-radius: 8px; /* Bordes redondeados */
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Suaviza los efectos */
     }
 }
 
